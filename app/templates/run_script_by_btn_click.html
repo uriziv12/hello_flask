@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script>
+var btnName = function() {
+  $.get('/do_something',
+    function(x) {
+      $("#resBtnHere").html(x);
+    }
+  )
+}
+btnName()
+</script>
+</head>
+
+<body>
+
+<h1>Run script by button click</h1>
+
+<button
+  type="button"
+  class="btn btn-primary"
+  onclick="btnName()"
+>Click here
+</button>
+
+<p id="resBtnHere"></p>
+
+</body>
+</html>
